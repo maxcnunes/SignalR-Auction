@@ -11,16 +11,16 @@ namespace SignalRAuction.Controllers
     {
         //
         // GET: /Home/
-
         public ActionResult Index()
         {
             return View();
         }
 
-        private string SerializeToJson(object obj)
+        //
+        // GET: /Auction/
+        public ActionResult Auction()
         {
-            return new System.Web.Script.Serialization
-                        .JavaScriptSerializer().Serialize(obj);
+            return View();
         }
     }
 }

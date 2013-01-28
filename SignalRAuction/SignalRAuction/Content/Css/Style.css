@@ -2,12 +2,44 @@
     background: #fffcf5;
     font-size: 85%;
     font-family: 'Yanone Kaffeesatz';
+    margin: 0;
 }
+
+input[type=text] {
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    padding: 2px;
+}
+
+#user {
+    width: 250px;
+    margin: 0 auto;
+    background: #fff;
+    -webkit-border-radius: 0px 0px 8px 8px;
+    -moz-border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0px 0px 7px #777;
+    text-align: center;
+}
+
+    #user input[type=text] {
+    }
 
 #wrapper {
     width: 450px;
-    margin: 100px auto;
+    margin: 80px auto;
 }
+
+.content {
+    padding:10px;
+    font-size:20px;
+}
+
 
 #title-bid {
     text-align: center;
@@ -44,18 +76,17 @@
     padding-top: 15px;
 }
 
-#title-time, #type-time {
+#title-time {
     font-size: 25px;
     display: inline-block;
 }
 
 #value-time {
     color: red;
-    font-size: 50px;
+    font-size: 40px;
     display: inline-block;
     font-family: 'Yanone Kaffeesatz';
-    width:60px;
-    text-align:center;
+    text-align: center;
 }
 
 #bid-send {
@@ -71,17 +102,10 @@
 }
 
 #prod-value-bid {
-    border: 1px solid #DDD;
-    background: #FFF;
-    padding: 2px;
     margin: 0 2px 10px 2px;
     width: 70px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    color: orangered;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    text-align:right;
 }
 
 #prod-btn-bid {
@@ -117,14 +141,26 @@
 
 
 #total-bids {
-    margin-top:25px;
-    font-size:25px;
-    color:gray;
-    text-align:center;
+    margin-top: 25px;
+    font-size: 25px;
+    color: gray;
+    text-align: center;
 }
-#total-bids span {
-    font-size:50px;
-    color:black;
+
+    #total-bids span {
+        font-size: 50px;
+        color: black;
+    }
+
+#recent-bids h3 {
+    border-bottom: 1px dashed #ddd;
+    color: gray;
+}
+
+#dialog-message p span {
+    margin: 0 7px 0px 0;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 /* Border Radius */

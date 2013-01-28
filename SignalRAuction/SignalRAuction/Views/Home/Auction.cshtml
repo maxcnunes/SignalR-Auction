@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Buy an Astronaut Clothes";
+}
+
+@section Top {
+    <div id="user">
+        Who are you?
+        <input type="text" />
+    </div>
+}
+
+<div id="picture">
+    <img src="~/Content/Images/Apollo_17_On_Moon.jpg" />
+</div>
+<div id="auction">
+    <div id="time">
+        <span id="title-time">Remaining</span>
+        <span id="value-time">
+            <!-- time -->
+        </span>
+    </div>
+    <div id="bid-send">
+        <h3 id="title-bid-now">Do a bid now:</h3>
+        <span id="currency">$</span>
+        <input type="text" id="prod-value-bid" maxlength="5" readonly="readonly" />
+        <input type="button" id="prod-btn-bid" value="Place Bid" />
+    </div>
+</div>
+
+
+@section Bottom {
+    <h2 id="total-bids">
+        Already was done 
+        <span>
+            <!-- amount -->
+        </span>
+        bids
+    </h2>
+    <div id="recent-bids">
+        <h3>Recent Bids</h3>
+        <ul>
+            <!-- time + user -->
+        </ul>
+    </div>
+
+    <div id="message"></div>
+
+}
