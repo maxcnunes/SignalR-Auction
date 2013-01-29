@@ -29,19 +29,33 @@ namespace SignalRAuction.Hubs
                 if (initialized)
                     return;
 
-                // Initialize model
-                auctionViewModel = new AuctionViewModel(0, 10, DateTime.Now.AddSeconds(30), 0);
-
-                timer = new System.Threading.Timer(TimerExpired, null, secs_10, 0);
-
-                initialized = true;
+                InitializeAuction();
             }
+        }
+
+        private void InitializeAuction()
+        {
+            // Initialize model
+            auctionViewModel = new AuctionViewModel(0, 10, DateTime.Now.AddSeconds(30), 0);
+
+            timer = new System.Threading.Timer(TimerExpired, null, secs_10, 0);
+
+            initialized = true;
         }
 
         private static IHubContext GetHubContext()
         {
             // Get a reference to all the clients for AuctionHub
             return GlobalHost.ConnectionManager.GetHubContext<AuctionHub>();
+        }
+
+        public void ResetCurrentAuction()
+        {
+            // Initialize Auction again
+            InitializeAuction();
+
+            // Update all clients
+            CallRefresh();
         }
 
         internal static void AuctionRefresh(AuctionViewModel model)
